@@ -1,0 +1,9 @@
+{% extends 'quiz/base.html' %}
+
+{% block content %}
+    <h2>Quiz Result</h2>
+    <p>Total Questions: {{ total }}</p>
+    <p>Correct Answers: {{ correct }}</p>
+    <p>Incorrect Answers: {{ incorrect }}</p>
+    <a href="{% url 'start_quiz' %}" class="btn">Restart Quiz</a>
+{% endblock %}
