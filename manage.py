@@ -22,5 +22,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # application = get_wsgi_application()
+    application = get_wsgi_application()
     main()
