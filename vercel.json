@@ -15,6 +15,9 @@
         "src": "/(.*)",
         "dest": "manage.py"
       }
-    ]
+    ],
+    "env": {
+    "DJANGO_SETTINGS_MODULE": "quiz_app_project.settings"
+  }
   }
   
