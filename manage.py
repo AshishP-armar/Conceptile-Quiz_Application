@@ -3,6 +3,8 @@
 import os
 import sys
 from django.core.wsgi import get_wsgi_application
+from dotenv import load_dotenv
+load_dotenv()  # This will load variables from your .env file
 
 
 def main():
@@ -18,7 +20,7 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-application = get_wsgi_application()
 
 if __name__ == '__main__':
+    # application = get_wsgi_application()
     main()
