@@ -5,8 +5,9 @@ import sys
 from django.core.wsgi import get_wsgi_application
 from dotenv import load_dotenv
 load_dotenv()  # This will load variables from your .env file
+import config
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quiz_app_project.settings')
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quiz_app_project.settings')
 
 def main():
     """Run administrative tasks."""
