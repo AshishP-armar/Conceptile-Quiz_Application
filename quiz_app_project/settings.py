@@ -81,12 +81,30 @@ WSGI_APPLICATION = 'quiz_app_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+import dj_database_url
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://Ashish_owner:HTsy0F5CSwer@ep-small-glitter-a5bbf3lq.us-east-2.aws.neon.tech/Ashish?sslmode=require')
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(DATABASE_URL)
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # Use MySQL backend
+#         'NAME': 'atp_4',          # Replace with your DB name from freesqlhosting.net
+#         'USER': 'Ashish',               # Your MySQL username
+#         'PASSWORD': 'HTsy0F5CSwer',           # Your MySQL password
+#         'HOST': 'dpg-ctdapa1opnds73aip2i0-a.render.com',               # Host URL (e.g., db4.freesqlhosting.net)
+#         'PORT': '3306',                        # Default MySQL port
+#     }
+# }
+
 
 
 # Password validation
