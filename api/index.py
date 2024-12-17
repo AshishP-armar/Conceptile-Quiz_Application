@@ -1,3 +1,3 @@
-from quiz_app_project.wsgi import app
+from quiz_app_project.wsgi import application
 
 # Vercel looks for a variable named `app`
