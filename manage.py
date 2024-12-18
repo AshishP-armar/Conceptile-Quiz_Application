@@ -2,12 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from django.core.wsgi import get_wsgi_application
-from dotenv import load_dotenv
-load_dotenv()  # This will load variables from your .env file
-import config
 
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quiz_app_project.settings')
 
 def main():
     """Run administrative tasks."""
@@ -23,7 +18,7 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-application = get_wsgi_application()
+# application = get_wsgi_application()
 if __name__ == '__main__':
     from django.core.management import execute_from_command_line
 
