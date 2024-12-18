@@ -89,21 +89,20 @@ WSGI_APPLICATION = 'quiz_app_project.wsgi.application'
 # }
 
 import dj_database_url
-DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://Ashish_owner:HTsy0F5CSwer@ep-small-glitter-a5bbf3lq.us-east-2.aws.neon.tech/Ashish?sslmode=require')
+
+
 
 DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL)
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # Use the MySQL backend
+        'NAME': 'Quiz_App',                   # Your database name
+        'USER': 'root',                       # Your MySQL username
+        'PASSWORD': 'Atp@4466',               # Your MySQL password
+        'HOST': 'localhost',                  # Use '127.0.0.1' or 'localhost' for local setup
+        'PORT': '3306',                       # MySQL default port
+    }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',  # Use MySQL backend
-#         'NAME': 'atp_4',          # Replace with your DB name from freesqlhosting.net
-#         'USER': 'Ashish',               # Your MySQL username
-#         'PASSWORD': 'HTsy0F5CSwer',           # Your MySQL password
-#         'HOST': 'dpg-ctdapa1opnds73aip2i0-a.render.com',               # Host URL (e.g., db4.freesqlhosting.net)
-#         'PORT': '3306',                        # Default MySQL port
-#     }
-# }
+
 
 
 
